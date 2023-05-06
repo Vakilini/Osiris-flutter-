@@ -10,7 +10,7 @@ class _StartState extends State<Start> {
   Widget build(BuildContext context) {
     return Scaffold(
       backgroundColor: Colors.grey[800],
-      body:  Image.asset("assets/images/img.png"),
+      body: Center(child: Image.asset("assets/images/img.png"),)
     );
   }
 }

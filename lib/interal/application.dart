@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:osiris_flutter/presentation/login.dart';
 import 'package:osiris_flutter/presentation/start.dart';
 
 class Application extends StatelessWidget {
@@ -10,7 +11,7 @@ class Application extends StatelessWidget {
         primarySwatch: Colors.blue,
         visualDensity: VisualDensity.adaptivePlatformDensity,
       ),
-      home: Start(),
+      home: Login(),
     );
   }
 }

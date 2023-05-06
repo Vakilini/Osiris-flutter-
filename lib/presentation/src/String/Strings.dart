@@ -1,249 +1,258 @@
-
+part of '../src.dart';
 //Список строк, используемый в приложении, разделённый классами, по принципу их логики использования
+
+
 
 /// Класс ErrorsInputText хранит в себе текстовые строки,
 /// описывающие различные ошибки, который могу возникнуть
 /// при работе пользователя с приложением.
-class ErrorsInputText {
+abstract class ErrorsInputText {
   ///uncorrectLogin - строка описывающая ошибку валидации
   /// логина, введённого пользователем
-  final String uncorrectLogin = 'Не верный логин';
+  static const String uncorrectLogin = 'Не верный логин';
 
   ///uncorrecAlreadyExist - строка описывает ошибку при
   /// которой пользователь пытается зарегестрировать аккаунт
   /// на логин, который уже относится к какой-либо учётной записи
-  final String uncorrecAlreadyExist = 'Пользователь с этим логином уже зарегестрирован';
+  static const String uncorrecAlreadyExist = 'Пользователь с этим логином уже зарегестрирован';
 
   ///uncorrecPassword - строка описывает ошибку валидации
   ///пароля, введённого пользователем
-  final String uncorrecPassword = "Не верный пароль";
+  static const String uncorrecPassword = "Не верный пароль";
 
   ///uncorrecPassword_again - строка описывает ошибку, вызванную несоответвием
   /// введённой информаци при регистрации в поле пароля и
   ///в поле для потверждения(повтора) пароля.
-  final String uncorrecPassword_again = "Пароли не совпадают";
+  static const String uncorrecPassword_again = "Пароли не совпадают";
 
   ///uncorrecPassword_mistake - строка описывает ошибку некорректности
   //введённого пароля пользователем при регистрации
-  final String uncorrecPassword_mistake = "Используйте в пароле строчные и заглавные латинские символы,\n а так же символы пунктуации";
+  static const String uncorrecPassword_mistake = "Используйте в пароле строчные и заглавные латинские символы,\n а так же символы пунктуации";
 
   ///uncorrecName - строка описывает ошибку некорректности
   ///введённой информации об имени пользователя при регистрации или
   ///при изменении имени уже в настро йках информации об аккаунте
-  final String uncorrecName = "Имя слишком короткое";
+  static const String uncorrecName = "Имя слишком короткое";
 
   ///doNotPublishTest - строка описывает ошибку публикации
   ///теста, вызванную отсутвием в содержании теста вопросов
-  final String doNotPublishTest = "Нельзя опубликовать тест без вопросов";
+  static const String doNotPublishTest = "Нельзя опубликовать тест без вопросов";
 }
 
 ///Класс TitleText хранит в себе строки описывающие заголовки окон,
 ///являющихся частью различных функциональных опций приложения
-class TtitleText {
+
+
+abstract class TtitleText {
+
+  static const void d = "data";
+
   ///authorization -строка описывающя заголовок окна авторизации в профиле
-  final String authorization = "Авторизация";
+  static const String authorization = "Авторизация";
 
   ///registration -строка описывающя заголовок окна регистрации профиля
-  final String registration = "Регистрация";
+  static const String registration = "Регистрация";
 
   ///community -строка описывающя заголовок окна сообщество платформы
-  final String community = "Сообщество";
+  static const String community = "Сообщество";
 
   ///createTest -строка описывающя заголовок окна инструмента по созданию
   ///и публикации теста
-  final String createTest = "Создание теста";
+  static const String createTest = "Создание теста";
 
   ///createQuestion -строка описывающя заголовок окна инструмента настройки
   ///вопроса теста
-  final String createQuestion = "Создание вопроса";
+  static const String createQuestion = "Создание вопроса";
 
   ///profile -строка описывающя заголовок окна, отображающего
   ///информацию о профиле пользователя
-  final String profile = "Профиль";
+  static const String profile = "Профиль";
 
   ///favourites -строка описывающя заголовок окна, содержащего
   ///информацию и ссылки на тесты, которые были добавленны в
   ///в избранный раздел пользователя
-  final String favourites = "Избранное";
+  static const String favourites = "Избранное";
 
   ///customizationTest -строка описывающя заголовок окна,
   ///предоставляющий иструмент по редактированию тестов,
   ///созданных пользователем и не опубликованных
-  final String customizationTest = "Настройки теста";
+  static const String customizationTest = "Настройки теста";
 
   ///dataOfTest -строка описывающя заголовок окна, содержащего
   /// список информации и статистики по ответам тестов,
   /// обуликованных пользователем
-  final String dataOfTest = "Статистика ответов";
+  static const String dataOfTest = "Статистика ответов";
 
   ///preview -строка описывающя заголовок комплекса виджетов
   /// на окне настройки вопроса, представляющий предпросмотр
   ///собираемого вопроса
-  final String preview = "Предпросмотр";
+  static const String preview = "Предпросмотр";
 
 }
 ///Класс содержит строки используемы для визуального отбражения
 ///текста на функциональных кнопках приложения
-class ButtonText {
+
+
+abstract class ButtonText {
   ///enter - строка описывающе визуальное представление текста
   ///на функциональной кнопке, используемой для входа в аккаунт
   ///по регистрационным данным
-  final String enter = "Войти";
+  static const String enter = "Войти";
 
   ///registration - строка описывающе визуальное представление текста
   ///на функциональной кнопке, используемой для регистрции
   ///профиля
-  final String registration = "Регистрация";
+  static const String registration = "Регистрация";
 
   ///saveFavorites - строка описывающе визуальное представление текста
   ///на функциональной кнопке, используемой для определения
   ///теста в список избранных тестов пользователя
-  final String saveFavorites = "Сохранить в избранное";
+  static const String saveFavorites = "Сохранить в избранное";
 
   ///publish - строка описывающе визуальное представление текста
   ///на функциональной кнопке, используемой для публикации
   ///теста пользователя
-  final String publish = "Опубликовать";
+  static const String publish = "Опубликовать";
 
   ///addQuestion - строка описывающе визуальное представление текста
   ///на функциональной кнопке, используемой для добавления
   /// вопроса в содержание теста
-  final String addQuestion = "Вопрос";
+  static const String addQuestion = "Вопрос";
 
   ///questionMandatory - строка описывающе визуальное представление текста
   ///на функциональной кнопке, используемой для определения
   ///параметра "обязательный" у вопроса
-  final String questionMandatory = "Сделать этот вопрос обязательным";
+  static const String questionMandatory = "Сделать этот вопрос обязательным";
 
   ///saveQuestion - строка описывающе визуальное представление текста
   ///на функциональной кнопке, используемой для потверждения
   ///созданной конструкции вопроса и добавления его в содержание теста
-  final String saveQuestion = "Сохранить вопрос";
+  static const String saveQuestion = "Сохранить вопрос";
 
   ///chooseQuestionType - строка описывающе визуальное представление текста
   ///на функциональной кнопке, используемой для определения
   /// ключевого параметра вопроса, определяющий тип вариантов ответа на него
-  final String chooseQuestionType = "Тип вопроса";
+  static const String chooseQuestionType = "Тип вопроса";
 
   ///addResponseOption - строка описывающе визуальное представление текста
   ///на функциональной кнопке, используемой для добавления
   ///варианта ответа в содержание вопроса
-  final String addResponseOption = "Вариант ответа";
+  static const String addResponseOption = "Вариант ответа";
 
   ///chooseQuestionType_bool - строка описывающе визуальное представление текста
   ///на функциональной кнопке, используемой для определения
   /// типа варианта ответа на вопрос как несколько булевых значений
-  final String chooseQuestionType_bool = "Булевое значение - несколько вариантов";
+  static const String chooseQuestionType_bool = "Булевое значение - несколько вариантов";
 
   ///chooseQuestionType_bool_1 - строка описывающе визуальное представление текста
   ///на функциональной кнопке, используемой для определения
   /// типа варианта ответа на вопрос как одно булевое значение
-  final String chooseQuestionType_bool_1 = "Булевое значение - один вариант";
+  static const String chooseQuestionType_bool_1 = "Булевое значение - один вариант";
 
   ///chooseQuestionType_text - строка описывающе визуальное представление текста
   ///на функциональной кнопке, используемой для определения
   ///типа варианта ответа на вопрос как тесктовый ввод
-  final String chooseQuestionType_text = "Текст";
+  static const String chooseQuestionType_text = "Текст";
 
   ///chooseQuestionType_date - строка описывающе визуальное представление текста
   ///на функциональной кнопке, используемой для определения
   ///типа варианта ответа на вопрос как ввод даты
-  final String chooseQuestionType_date = "Дата";
+  static const String chooseQuestionType_date = "Дата";
 
   ///chooseDateType - строка описывающе визуальное представление текста
   ///на функциональной кнопке, используемой для определения шаблона варианта
   ///ответа на вопрос с типом дата
-  final String chooseDateType = "Тип даты";
+  static const String chooseDateType = "Тип даты";
 
   ///chooseDateType_dmy - строка описывающе визуальное представление текста
   ///на функциональной кнопке, используемой для определения шаблона варианта
   ///ответа на вопрос с типом дата как дата.мясяц.год
-  final String chooseDateType_dmy = "дата.мясяц.год";
+  static const String chooseDateType_dmy = "дата.мясяц.год";
 
   ///chooseDateType_dm - строка описывающе визуальное представление текста
   ///на функциональной кнопке, используемой для определения шаблона варианта
   ///ответа на вопрос с типом дата как дата.мясяц
-  final String chooseDateType_dm = "дата.мясяц";
+  static const String chooseDateType_dm = "дата.мясяц";
 
   ///chooseDateType_my - строка описывающе визуальное представление текста
   ///на функциональной кнопке, используемой для определения шаблона варианта
   ///ответа на вопрос с типом дата как мясяц.год
-  final String chooseDateType_my = "мясяц.год";
+  static const String chooseDateType_my = "мясяц.год";
 
   ///chooseDateType_y - строка описывающе визуальное представление текста
   ///на функциональной кнопке, используемой для определения шаблона варианта
   ///ответа на вопрос с типом дата как год
-  final String chooseDateType_y = "год";
+  static const String chooseDateType_y = "год";
 
   ///replacePhoto - строка описывающе визуальное представление текста
   ///на функциональной кнопке, используемой для изменения фото профиля
-  final String replacePhoto = "Изменить фотографию";
+  static const String replacePhoto = "Изменить фотографию";
 
   ///replaceName - строка описывающе визуальное представление текста
   ///на функциональной кнопке, используемой для изменения данных об имени владельца профиля
-  final String replaceName = "Изменить данные";
+  static const String replaceName = "Изменить данные";
 
   ///cretePhoto - строка описывающе визуальное представление текста
   ///на функциональной кнопке, используемой для измения фото профиля с помощью камеры телефона
-  final String cretePhoto = "Сделать снимок";
+  static const String cretePhoto = "Сделать снимок";
 
   ///downloadPhoto - строка описывающе визуальное представление текста
   ///на функциональной кнопке, используемой для изменения фото профиля с помощью медиатеки телефона
-  final String downloadPhoto = "Загрузить фото из галереи";
+  static const String downloadPhoto = "Загрузить фото из галереи";
 
   ///createTest - строка описывающе визуальное представление текста
   ///на функциональной кнопке, используемой для начала работы с редактором тестов,
   ///для их последующего добавления в список избранных тестов пользователя
-  final String createTest = "Создать тест";
+  static const String createTest = "Создать тест";
 
 }
 
 ///Класс содержит строки и функцию для отображения текстовых сообщений поверх интерфейса
-class MessText {
+abstract class MessText {
   ///Строка описывающе сообщение об отсутвие элементов в списке избранных тесов пользователя
-  final String haveNotTest = "Пока что в избранном у вас нет ни одного теста.\n В избранном отображаются все тесты созданыые вами и тесты на которые вы ответили.";
+  static const String haveNotTest = "Пока что в избранном у вас нет ни одного теста.\n В избранном отображаются все тесты созданыые вами и тесты на которые вы ответили.";
 
   ///Строка описывающая собщение об отсутсвии элементов списке опубликованных тестов
-  final String haveNotPublishTest = "Пока что нет ни одного теста в публичном доступе.";
+  static const String haveNotPublishTest = "Пока что нет ни одного теста в публичном доступе.";
 
   ///Строка описывающая собщение об ошибке подключения к серверу платформы
-  final String haveNotEnternet = "Ошибка подключения к серверу.\n Проверьте состояние своего подключения к интернету.";
+  static const String haveNotEnternet = "Ошибка подключения к серверу.\n Проверьте состояние своего подключения к интернету.";
 
   ///Функция создающая строку описывающую собщение о последнем этапе регистрации - подверждении электронной почты
   String createMessConfirmation(String email) => "На вашу почту\n$email\nвыслано письмо для подверждения.\nДля завершения регистрации подтвердите свою почту.";
 }
 
 ///Класс содержит строки являющиеся описанием к полям заполнения данных
-class Description {
+abstract class Description {
   ///Описание к полям воода логина
-  final String Login = "Логин";
+  static const String Login = "Логин";
 
   ///Описание к полям ввода пароля
-  final String Password = "Пароль";
+  static const String Password = "Пароль";
 
   /// Описание к полям ввода имени
-  final String Name = "Имя";
+  static const String Name = "Имя";
 
   ///Описание к полям ввода Фамилии
-  final String Surname = "Фамилия";
+  static const String Surname = "Фамилия";
 
   ///Описание к полям ввода подтверждения пароля
-  final String RepeatPassword = "Повторите пароль";
+  static const String RepeatPassword = "Повторите пароль";
 
   ///Описание к полям ввода запроса поиска из списка
-  final String Search = "Поиск";
+  static const String Search = "Поиск";
 
   ///Описание к полям ввода названия теста
-  final String NameOfTest = "Название теста";
+  static const String NameOfTest = "Название теста";
 
   ///Описание к полям ввода описания теста
-  final String DescriptionOfTes = "Описание теста";
+  static const String DescriptionOfTes = "Описание теста";
 
   ///Описание к полям ввода названия вопроса теста
-  final String nameOfQuestion = "Название вопроса";
+  static const String nameOfQuestion = "Название вопроса";
 
   ///Описание к полям ввода описания вопроса
-  final String DescriptionOfQuestion = "Описание вопроса";
+  static const String DescriptionOfQuestion = "Описание вопроса";
 
   ///Функция фромирующая описание о количестве пользователей прошедших тест
   String numberUsersPassed(int numberU_PT) => "Тест прошли $numberU_PT раз.";
